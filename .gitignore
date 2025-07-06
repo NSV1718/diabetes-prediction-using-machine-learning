@@ -26,3 +26,7 @@ Thumbs.db
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Ignore project virtual environment and library folders
+Lib/
+venv/
