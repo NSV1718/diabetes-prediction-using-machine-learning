@@ -14,8 +14,8 @@ This project predicts whether a person has diabetes based on health metrics usin
 1. Install Python 3.13 (add to PATH).
 2. Clone the repo:
    ```bash
-   git clone <repo-url>
-   cd "EDU project"
+   git clone https://github.com/Nevanthsaivignesh/diabetes-prediction-using-machine-learning.git
+   cd "diabetes-prediction-using-machine-learning"
    ```
 3. Create & activate a virtual environment:
    ```powershell
