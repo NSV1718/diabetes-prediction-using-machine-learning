@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import svm
 from sklearn.metrics import accuracy_score
 import os
+import urllib.request  # for downloading dataset
 
 print("Please enter the following information:")
 
@@ -23,7 +24,10 @@ age = float(input("Age: "))
 script_dir = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(script_dir, 'diabetes.csv')
 if not os.path.exists(csv_path):
-    raise FileNotFoundError(f"Could not find diabetes.csv in {script_dir}")
+    print("Dataset not found. Downloading diabetes.csv...")
+    url = "https://raw.githubusercontent.com/plotly/datasets/master/diabetes.csv"
+    urllib.request.urlretrieve(url, csv_path)
+    print("Download complete.")
 diabetes_dataset = pd.read_csv(csv_path)  # load from local file
 # number of rows and colums in this dataset
 diabetes_dataset.shape

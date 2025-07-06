@@ -29,4 +29,5 @@ Thumbs.db
 
 # Ignore project virtual environment and library folders
 Lib/
+Scripts/
 venv/
