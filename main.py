@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+import sys, subprocess
+# Install missing dependencies
+for pkg, module in [('numpy', None), ('pandas', None), ('scikit-learn', 'sklearn')]:
+    try:
+        __import__(module or pkg)
+    except ImportError:
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', pkg])
+
+# Begin actual imports
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
